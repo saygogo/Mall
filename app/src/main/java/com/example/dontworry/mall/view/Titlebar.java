@@ -18,7 +18,7 @@ import com.example.dontworry.mall.R;
 public class Titlebar extends LinearLayout implements View.OnClickListener {
     private TextView tv_sousuo;
     private RelativeLayout rl_game;
-    private ImageView tv_game;
+    private ImageView iv_record;
     private Context context;
 
     public Titlebar(Context context, AttributeSet attrs) {
@@ -33,10 +33,10 @@ public class Titlebar extends LinearLayout implements View.OnClickListener {
         super.onFinishInflate();
         tv_sousuo = (TextView) getChildAt(1);
         rl_game = (RelativeLayout) getChildAt(2);
-        tv_game = (ImageView) getChildAt(3);
+        iv_record = (ImageView) getChildAt(3);
         tv_sousuo.setOnClickListener(this);
         rl_game.setOnClickListener(this);
-        tv_game.setOnClickListener(this);
+        iv_record.setOnClickListener(this);
     }
 
     @Override
@@ -48,7 +48,7 @@ public class Titlebar extends LinearLayout implements View.OnClickListener {
             case R.id.rl_game:
                 Toast.makeText(context, "游戏", Toast.LENGTH_SHORT).show();
                 break;
-            case R.id.tv_game:
+            case R.id.iv_record:
                 Toast.makeText(context, "记录", Toast.LENGTH_SHORT).show();
                 break;
         }
