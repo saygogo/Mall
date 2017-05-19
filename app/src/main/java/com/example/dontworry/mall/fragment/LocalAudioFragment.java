@@ -15,7 +15,6 @@ public class LocalAudioFragment extends BaseFragment {
     private TextView textView;
 
 
-    //重写视图
     @Override
     public View initView() {
         textView = new TextView(context);

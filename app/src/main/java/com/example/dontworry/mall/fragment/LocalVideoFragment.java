@@ -5,6 +5,7 @@ import android.view.Gravity;
 import android.view.View;
 import android.widget.TextView;
 
+import com.example.dontworry.mall.R;
 import com.example.dontworry.mall.base.BaseFragment;
 
 /**
@@ -12,22 +13,16 @@ import com.example.dontworry.mall.base.BaseFragment;
  */
 
 public class LocalVideoFragment extends BaseFragment {
-    private TextView textView;
 
 
-    //重写视图
     @Override
     public View initView() {
-        textView = new TextView(context);
-        textView.setTextSize(30);
-        textView.setGravity(Gravity.CENTER);
-        textView.setTextColor(Color.RED);
-        return textView;
+        View view = View.inflate(context, R.layout.fragment_local_video,null);
+        return view;
     }
 
     @Override
     public void initDate() {
         super.initDate();
-        textView.setText("本地电影的内容");
     }
 }
